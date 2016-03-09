@@ -1,0 +1,338 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F9C264EB1C8FEBC90063231B /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = F9C264DC1C8FEBC90063231B /* Common.h */; };
+		F9C264EC1C8FEBC90063231B /* CommonHashTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9C264DD1C8FEBC90063231B /* CommonHashTable.cpp */; };
+		F9C264ED1C8FEBC90063231B /* CommonHashTable.h in Headers */ = {isa = PBXBuildFile; fileRef = F9C264DE1C8FEBC90063231B /* CommonHashTable.h */; };
+		F9C264EE1C8FEBC90063231B /* FsdFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9C264DF1C8FEBC90063231B /* FsdFilter.cpp */; };
+		F9C264EF1C8FEBC90063231B /* FsdFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = F9C264E01C8FEBC90063231B /* FsdFilter.h */; };
+		F9C264F01C8FEBC90063231B /* Kauth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9C264E11C8FEBC90063231B /* Kauth.cpp */; };
+		F9C264F11C8FEBC90063231B /* Kauth.h in Headers */ = {isa = PBXBuildFile; fileRef = F9C264E21C8FEBC90063231B /* Kauth.h */; };
+		F9C264F21C8FEBC90063231B /* VersionDependent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9C264E31C8FEBC90063231B /* VersionDependent.cpp */; };
+		F9C264F31C8FEBC90063231B /* VersionDependent.h in Headers */ = {isa = PBXBuildFile; fileRef = F9C264E41C8FEBC90063231B /* VersionDependent.h */; };
+		F9C264F41C8FEBC90063231B /* VFSHooks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9C264E51C8FEBC90063231B /* VFSHooks.cpp */; };
+		F9C264F51C8FEBC90063231B /* VFSHooks.h in Headers */ = {isa = PBXBuildFile; fileRef = F9C264E61C8FEBC90063231B /* VFSHooks.h */; };
+		F9C264F61C8FEBC90063231B /* VmPmap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9C264E71C8FEBC90063231B /* VmPmap.cpp */; };
+		F9C264F71C8FEBC90063231B /* VmPmap.h in Headers */ = {isa = PBXBuildFile; fileRef = F9C264E81C8FEBC90063231B /* VmPmap.h */; };
+		F9C264F81C8FEBC90063231B /* VNodeHook.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9C264E91C8FEBC90063231B /* VNodeHook.cpp */; };
+		F9C264F91C8FEBC90063231B /* VNodeHook.h in Headers */ = {isa = PBXBuildFile; fileRef = F9C264EA1C8FEBC90063231B /* VNodeHook.h */; };
+		F9C264FF1C8FEFD80063231B /* distorm in Resources */ = {isa = PBXBuildFile; fileRef = F9C264FE1C8FEFD80063231B /* distorm */; };
+		F9C265021C8FF1C90063231B /* FltFakeFSD.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9C265001C8FF1C90063231B /* FltFakeFSD.cpp */; };
+		F9C265031C8FF1C90063231B /* FltFakeFSD.h in Headers */ = {isa = PBXBuildFile; fileRef = F9C265011C8FF1C90063231B /* FltFakeFSD.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F9C264CF1C8FEB920063231B /* FsdFilter.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FsdFilter.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9C264D61C8FEB920063231B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9C264DC1C8FEBC90063231B /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		F9C264DD1C8FEBC90063231B /* CommonHashTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CommonHashTable.cpp; sourceTree = "<group>"; };
+		F9C264DE1C8FEBC90063231B /* CommonHashTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonHashTable.h; sourceTree = "<group>"; };
+		F9C264DF1C8FEBC90063231B /* FsdFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FsdFilter.cpp; sourceTree = "<group>"; };
+		F9C264E01C8FEBC90063231B /* FsdFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FsdFilter.h; sourceTree = "<group>"; };
+		F9C264E11C8FEBC90063231B /* Kauth.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Kauth.cpp; sourceTree = "<group>"; };
+		F9C264E21C8FEBC90063231B /* Kauth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Kauth.h; sourceTree = "<group>"; };
+		F9C264E31C8FEBC90063231B /* VersionDependent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VersionDependent.cpp; sourceTree = "<group>"; };
+		F9C264E41C8FEBC90063231B /* VersionDependent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionDependent.h; sourceTree = "<group>"; };
+		F9C264E51C8FEBC90063231B /* VFSHooks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VFSHooks.cpp; sourceTree = "<group>"; };
+		F9C264E61C8FEBC90063231B /* VFSHooks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VFSHooks.h; sourceTree = "<group>"; };
+		F9C264E71C8FEBC90063231B /* VmPmap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VmPmap.cpp; sourceTree = "<group>"; };
+		F9C264E81C8FEBC90063231B /* VmPmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VmPmap.h; sourceTree = "<group>"; };
+		F9C264E91C8FEBC90063231B /* VNodeHook.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VNodeHook.cpp; sourceTree = "<group>"; };
+		F9C264EA1C8FEBC90063231B /* VNodeHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VNodeHook.h; sourceTree = "<group>"; };
+		F9C264FE1C8FEFD80063231B /* distorm */ = {isa = PBXFileReference; lastKnownFileType = folder; path = distorm; sourceTree = "<group>"; };
+		F9C265001C8FF1C90063231B /* FltFakeFSD.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FltFakeFSD.cpp; sourceTree = "<group>"; };
+		F9C265011C8FF1C90063231B /* FltFakeFSD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FltFakeFSD.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9C264CB1C8FEB920063231B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F9C264C51C8FEB920063231B = {
+			isa = PBXGroup;
+			children = (
+				F9C264D11C8FEB920063231B /* FsdFilter */,
+				F9C264D01C8FEB920063231B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F9C264D01C8FEB920063231B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9C264CF1C8FEB920063231B /* FsdFilter.kext */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9C264D11C8FEB920063231B /* FsdFilter */ = {
+			isa = PBXGroup;
+			children = (
+				F9C264FE1C8FEFD80063231B /* distorm */,
+				F9C265001C8FF1C90063231B /* FltFakeFSD.cpp */,
+				F9C265011C8FF1C90063231B /* FltFakeFSD.h */,
+				F9C264DC1C8FEBC90063231B /* Common.h */,
+				F9C264DD1C8FEBC90063231B /* CommonHashTable.cpp */,
+				F9C264DE1C8FEBC90063231B /* CommonHashTable.h */,
+				F9C264DF1C8FEBC90063231B /* FsdFilter.cpp */,
+				F9C264E01C8FEBC90063231B /* FsdFilter.h */,
+				F9C264E11C8FEBC90063231B /* Kauth.cpp */,
+				F9C264E21C8FEBC90063231B /* Kauth.h */,
+				F9C264E31C8FEBC90063231B /* VersionDependent.cpp */,
+				F9C264E41C8FEBC90063231B /* VersionDependent.h */,
+				F9C264E51C8FEBC90063231B /* VFSHooks.cpp */,
+				F9C264E61C8FEBC90063231B /* VFSHooks.h */,
+				F9C264E71C8FEBC90063231B /* VmPmap.cpp */,
+				F9C264E81C8FEBC90063231B /* VmPmap.h */,
+				F9C264E91C8FEBC90063231B /* VNodeHook.cpp */,
+				F9C264EA1C8FEBC90063231B /* VNodeHook.h */,
+				F9C264D61C8FEB920063231B /* Info.plist */,
+			);
+			path = FsdFilter;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F9C264CC1C8FEB920063231B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9C264ED1C8FEBC90063231B /* CommonHashTable.h in Headers */,
+				F9C264F31C8FEBC90063231B /* VersionDependent.h in Headers */,
+				F9C264EB1C8FEBC90063231B /* Common.h in Headers */,
+				F9C264F11C8FEBC90063231B /* Kauth.h in Headers */,
+				F9C264EF1C8FEBC90063231B /* FsdFilter.h in Headers */,
+				F9C265031C8FF1C90063231B /* FltFakeFSD.h in Headers */,
+				F9C264F71C8FEBC90063231B /* VmPmap.h in Headers */,
+				F9C264F91C8FEBC90063231B /* VNodeHook.h in Headers */,
+				F9C264F51C8FEBC90063231B /* VFSHooks.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F9C264CE1C8FEB920063231B /* FsdFilter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9C264D91C8FEB920063231B /* Build configuration list for PBXNativeTarget "FsdFilter" */;
+			buildPhases = (
+				F9C264CA1C8FEB920063231B /* Sources */,
+				F9C264CB1C8FEB920063231B /* Frameworks */,
+				F9C264CC1C8FEB920063231B /* Headers */,
+				F9C264CD1C8FEB920063231B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FsdFilter;
+			productName = FsdFilter;
+			productReference = F9C264CF1C8FEB920063231B /* FsdFilter.kext */;
+			productType = "com.apple.product-type.kernel-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9C264C61C8FEB920063231B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Slava Imameev";
+				TargetAttributes = {
+					F9C264CE1C8FEB920063231B = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = F9C264C91C8FEB920063231B /* Build configuration list for PBXProject "FsdFilter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F9C264C51C8FEB920063231B;
+			productRefGroup = F9C264D01C8FEB920063231B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9C264CE1C8FEB920063231B /* FsdFilter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9C264CD1C8FEB920063231B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9C264FF1C8FEFD80063231B /* distorm in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9C264CA1C8FEB920063231B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9C264F81C8FEBC90063231B /* VNodeHook.cpp in Sources */,
+				F9C265021C8FF1C90063231B /* FltFakeFSD.cpp in Sources */,
+				F9C264EC1C8FEBC90063231B /* CommonHashTable.cpp in Sources */,
+				F9C264F41C8FEBC90063231B /* VFSHooks.cpp in Sources */,
+				F9C264EE1C8FEBC90063231B /* FsdFilter.cpp in Sources */,
+				F9C264F21C8FEBC90063231B /* VersionDependent.cpp in Sources */,
+				F9C264F61C8FEBC90063231B /* VmPmap.cpp in Sources */,
+				F9C264F01C8FEBC90063231B /* Kauth.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F9C264D71C8FEB920063231B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					DBG,
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F9C264D81C8FEB920063231B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F9C264DA1C8FEB920063231B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				INFOPLIST_FILE = FsdFilter/Info.plist;
+				MODULE_NAME = com.SlavaImameev.FsdFilter;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SlavaImameev.FsdFilter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		F9C264DB1C8FEB920063231B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				INFOPLIST_FILE = FsdFilter/Info.plist;
+				MODULE_NAME = com.SlavaImameev.FsdFilter;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SlavaImameev.FsdFilter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9C264C91C8FEB920063231B /* Build configuration list for PBXProject "FsdFilter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9C264D71C8FEB920063231B /* Debug */,
+				F9C264D81C8FEB920063231B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9C264D91C8FEB920063231B /* Build configuration list for PBXNativeTarget "FsdFilter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9C264DA1C8FEB920063231B /* Debug */,
+				F9C264DB1C8FEB920063231B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F9C264C61C8FEB920063231B /* Project object */;
+}
