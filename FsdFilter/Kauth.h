@@ -46,12 +46,6 @@ private:
                                        uintptr_t       arg2,       // parent vnode, or NULL
                                        uintptr_t       arg3);      // pointer to an errno value
     
-    static int	MacVnodeCheckLookup( kauth_cred_t cred,
-                                     struct vnode *dvp,
-                                     struct label *dlabel,
-                                     struct componentname *cnp
-                                    );
-    
     //
     // KAUTH_SCOPE_VNODE listener, used for the acess permissions check
     //
