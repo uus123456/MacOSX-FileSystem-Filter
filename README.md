@@ -1,6 +1,8 @@
 # MacOSX-FileSystem-Filter
 A file system filter for Mac OS X
 
+The license model is a BSD Open Source License. This is a non-viral license, only asking that if you use it, you acknowledge the authors, in this case Slava Imameev.
+
 Mac OS X doesn't support a full fledged file system filtering like Windows as Apple believes that BSD stackable file system doesn't fit Mac OS X. The available kernel authorization subsystem ( kauth ) allows only filtering open requests and a limited number of operations on file/directory. It doesn't allow filtering read and write operations and provides a limited control over file system operations as a vnode is already created at the moment of kauth callback invoking. In Windows parlance a kauth callback is a postoperation callback for create/open request ( IRP_MJ_CREATE for Windows ), that is all you have for Mac OS X. Not much really.
 
  The filtering can also be implemented by registering MAC ( Mandatory Access Control ) layer. But MAC has limited functionality and not consistent in relation to file system filtering as it was not designed as a file system filter layer. Instead of being called by VFS layer MAC registered callbacks are scattered through the kernel code like system calls and other kernel subsystems and if I remember correctly MAC was declared by Apple as deprecated for usage by third party developers.
