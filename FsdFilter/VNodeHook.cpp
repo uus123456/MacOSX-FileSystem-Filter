@@ -268,7 +268,7 @@ FltHookVnodeVop(
     // if you are changing the following condition
     // do not forget to change the one in FltUnHookVnodeVop()
     //
-    if( VREG != vnode_vtype( vnode ) ){
+    if( VREG != vnode_vtype( vnode ) && VDIR != vnode_vtype( vnode ) ){
         
         //
         // we are interested only in disk related vnodes
@@ -502,7 +502,7 @@ FltUnHookVnodeVop(
     assert( preemption_enabled() );
     assert( NULL != FltVnodeHooksHashTable::sVnodeHooksHashTable );
     
-    if( VREG != vnode_vtype( vnode ) ){
+    if( VREG != vnode_vtype( vnode ) && VDIR != vnode_vtype( vnode ) ){
         
         //
         // we are interested only in disk related vnodes
