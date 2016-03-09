@@ -40,6 +40,11 @@ com_FsdFilter::start(
     __in IOService *provider
     )
 {
+    if( kIOReturnSuccess != FltGetVnodeLayout() ){
+        
+        DBG_PRINT_ERROR( ( "FltGetVnodeLayout() failed\n" ) );
+        goto __exit_on_error;
+    }
     
     if( kIOReturnSuccess != VFSHookInit() ){
         
@@ -52,16 +57,6 @@ com_FsdFilter::start(
         DBG_PRINT_ERROR( ( "FltVnodeHooksHashTable::CreateStaticTableWithSize() failed\n" ) );
         goto __exit_on_error;
     }
-
-    
-    //
-    // gSuperUserContext must have a valid thread and process pointer
-    // TO DO redesign this! Indefinit holding a thread or task object is a bad behaviour.
-    //
-    thread_reference( current_thread() );
-    task_reference( current_task() );
-    
-    gSuperUserContext = vfs_context_create(NULL); // vfs_context_kernel()
     
     //
     // create an object for the vnodes KAuth callback and register the callback,
@@ -109,12 +104,6 @@ bool com_FsdFilter::init()
 {
     if(! super::init() )
         return false;
-    
-    if( kIOReturnSuccess != FltGetVnodeLayout() ){
-        
-        super::free();
-        return false;
-    }
     
     return true;
 }

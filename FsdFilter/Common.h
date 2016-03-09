@@ -230,10 +230,6 @@ AppendTailList(
 
 #define __countof( X )  ( sizeof( X ) / sizeof( X[0] ) )
 
-//---------------------------------------------------------------------
-
-extern vfs_context_t  gSuperUserContext; // TO DO redesign!
-
 
 //--------------------------------------------------------------------
 
