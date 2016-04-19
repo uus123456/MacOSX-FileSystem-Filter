@@ -41,8 +41,9 @@ FltVnodeSetsize(vnode_t vp, off_t size, int ioflag, vfs_context_t ctx)
 //--------------------------------------------------------------------
 
 //
-// The following code is full of lie. For a commercial release a version
-// independent hooker must be implemented.
+// The following code is full of lie. For a commercial release the version
+// independent hooker must be used. To compile with version independent 
+// hooker define USE_FAKE_FSD .
 //
 
 /*
