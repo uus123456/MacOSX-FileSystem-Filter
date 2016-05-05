@@ -66,9 +66,6 @@ public:
     virtual IOReturn  RegisterVnodeScopeCallback(void);
     
     static FltIOKitKAuthVnodeGate*  withCallbackRegistration( __in com_FsdFilter* provider );
-    
-    virtual void sendVFSDataToClient( __in struct _VFSData* data );
-    
 };
 
 //--------------------------------------------------------------------
