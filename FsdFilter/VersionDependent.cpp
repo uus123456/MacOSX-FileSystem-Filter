@@ -43,7 +43,12 @@ FltVnodeSetsize(vnode_t vp, off_t size, int ioflag, vfs_context_t ctx)
 //
 // The following code is full of lie. For a commercial release the version
 // independent hooker must be used. To compile with version independent 
-// hooker define USE_FAKE_FSD .
+// hooker define USE_FAKE_FSD . If USE_FAKE_FSD is defined you need to
+// add distorm disassembler files in the list of compiled files. Should you
+// forget to compile distorm disassembler the driver load fails with the
+// following error -
+// kxld[com.SlavaImameev.FsdFilter]: The following symbols are unresolved for this kext:
+// kxld[com.SlavaImameev.FsdFilter]: 	_distorm_decompose64
 //
 
 /*

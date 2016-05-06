@@ -4,6 +4,13 @@
 
 #ifdef USE_FAKE_FSD
 
+// If USE_FAKE_FSD is defined you need to
+// add distorm disassembler files in the list of compiled files. Should you
+// forget to compile distorm disassembler the driver load fails with the
+// following error -
+// kxld[com.SlavaImameev.FsdFilter]: The following symbols are unresolved for this kext:
+// kxld[com.SlavaImameev.FsdFilter]: 	_distorm_decompose64
+
 #include "Common.h"
 #include "FltFakeFSD.h"
 #include "VmPmap.h"
