@@ -51,3 +51,15 @@ FYI a set of call stacks when hooks are active
 `frame #6: 0xffffff800dfad88e kernel``close_internal_locked(p=0xffffff8019600650, fd=<unavailable>, fp=0xffffff801fc113d8, flags=<unavailable>) + 542 at kern_descrip.c:2765`  
 `frame #7: 0xffffff800dfb13d6 kernel``close_nocancel(p=0xffffff8019600650, uap=<unavailable>, retval=<unavailable>) + 342 at kern_descrip.c:2666`  
 `frame #8: 0xffffff800e04dcb2 kernel``unix_syscall64(state=0xffffff801bc20b20) + 610 at systemcalls.c:366`  
+  
+  
+- Inactive hook  
+`frame #0: 0xffffff7fa9dc6ac0 FsdFilter``FltVnopInactiveHook(ap=0xffffff803c5198cc) at VFSHooks.cpp:140`  
+`frame #1: 0xffffff8027775e06 kernel``VNOP_INACTIVE(vp=0xffffff803c519870, ctx=<unavailable>) + 70 at kpi_vfs.c:4756`  
+`frame #2: 0xffffff8027745543 kernel``vnode_rele_internal(vp=0xffffff80bfecbd90, fmode=<unavailable>, dont_reenter=<unavailable>, locked=<unavailable>) + 435 at vfs_subr.c:1929`  
+`frame #3: 0xffffff80279c5359 kernel``proc_exit(p=0xffffff80338eb000) + 2841 at vfs_subr.c:1845`  
+`frame #4: 0xffffff802756447a kernel``thread_terminate_self + 474 at thread.c:466`  
+`frame #5: 0xffffff802756878b kernel``special_handler(rh=<unavailable>, thread=<unavailable>) + 219 at thread_act.c:891`  
+`frame #6: 0xffffff802756855a kernel``act_execute_returnhandlers + 202 at thread_act.c:801`  
+`frame #7: 0xffffff8027536e76 kernel``ast_taken(reasons=<unavailable>, enable=<unavailable>) + 278 at ast.c:177`  
+`frame #8: 0xffffff802761eeae kernel``i386_astintr(preemption=<unavailable>) + 46 at trap.c:1171`  
