@@ -18,3 +18,25 @@ The lack of a stackable file system support by Mac OS X VFS required to find a w
  The filter registers a kauth callback FltIOKitKAuthVnodeGate::VnodeAuthorizeCallback which in turn calls FltHookVnodeVopAndParent that hooks vnode related operations. The kauth callback is used only to trigger filtering for a file system. When an application opens a file FileX in a directory DirX a vnode for a DirX is provided as a parameter for VnodeAuthorizeCallback so the following calls to file system's lookup or create operations for FileX will be visible for file system filter. When an original lookup or create returns a filter calls FltHookVnodeVopAndParent for a returned vnode or does this in a kauth callback which is nearly the same as kauth callback is a postoperation callback called after VNOP_LOOKUP or VNOP_CREATE. In case of lookup vnode operation do not forget about name cache, so lookup is not always called when an application calls open( FileX ), but if you need to see all lookup operations it is possible to disable name caching for a vnode. You can devise your own way of finding vnodes to hook depending on your requirements, for my purposes a kauth callback worked well as I was filtering vnodes of VREG type so I can use VDIR vnode as an anchor that started filtering for VREG vnodes. Also in most file systems vnode operations array is shared between all vnodes of VREG and VDIR type.
 
  The filter registers operations it wants to intercept in gFltVnodeVopHookEntries array. The skeleton filter immediately calls an original function from a hook but if you want to see a filter in action look at DldVNodeHook.cpp ( https://github.com/slavaim/MacOSX-Kernel-Filter/blob/master/DLDriver/DldVNodeHook.cpp ) which is a more advanced implementation at MacOSX-Kernel-Filter that also implements an isolation filter for read and write operations on a file by redirecting read and write to a sparse file on another volume. The isolation filter is implemented at DldCoveringVnode.cpp and a sparse file at DldSparseFile.cpp
+
+FYI a set of call stacks when hooks are active  
+  
+ - Lookup hook  
+ frame #0: 0xffffff7f903b7a11 FsdFilter`FltVnopLookupHook(ap=0xffffff80a7053a18) + 17 at VFSHooks.cpp:65  
+ frame #1: 0xffffff800dd3f2f8 kernel`lookup(ndp=0xffffff80a7053d58) + 968 at kpi_vfs.c:2783  
+ frame #2: 0xffffff800dd3ea95 kernel`namei(ndp=0xffffff80a7053d58) + 1941 at vfs_lookup.c:371  
+ frame #3: 0xffffff800dd52005 kernel`nameiat(ndp=0xffffff80a7053d58, dirfd=<unavailable>) + 133 at vfs_syscalls.c:2920  
+ frame #4: 0xffffff800dd5fcc7 kernel`fstatat_internal(segflg=<unavailable>, ctx=<unavailable>, path=<unavailable>, ub=<unavailable>, xsecurity=<unavailable>, xsecurity_size=<unavailable>, isstat64=<unavailable>, fd=<unavailable>, flag=<unavailable>) + 231 at vfs_syscalls.c:5268  
+ frame #5: 0xffffff800dd54f0a kernel`stat64(p=<unavailable>, uap=0xffffff801e3f1380, retval=<unavailable>) + 58 at vfs_syscalls.c:5413  
+ frame #6: 0xffffff800e04dcb2 kernel`unix_syscall64(state=0xffffff801dfc5540) + 610 at systemcalls.c:366  
+  
+  
+ - Pagein hook  
+ frame #0: 0xffffff7f903b7b91 FsdFilter`FltVnopPageinHook(ap=0xffffff80a76aba20) + 17 at VFSHooks.cpp:229  
+ frame #1: 0xffffff800e046372 kernel`vnode_pagein(vp=0xffffff801904db40, upl=0x0000000000000000, upl_offset=<unavailable>, f_offset=73416704, size=<unavailable>, flags=0, errorp=0xffffff80a76abae8) + 402 at kpi_vfs.c:4980  
+ frame #2: 0xffffff800db952a8 kernel`vnode_pager_cluster_read(vnode_object=0xffffff80a76abb10, base_offset=73416704, offset=<unavailable>, io_streaming=<unavailable>, cnt=<unavailable>) + 72 at bsd_vm.c:1045  
+ frame #3: 0xffffff800db943f3 kernel`vnode_pager_data_request(mem_obj=0xffffff8018fb5e38, offset=73433088, length=<unavailable>, desired_access=<unavailable>, fault_info=<unavailable>) + 99 at bsd_vm.c:826  
+ frame #4: 0xffffff800db9f75b kernel`vm_fault_page(first_object=0x0000000000000000, first_offset=73433088, fault_type=1, must_be_resident=0, caller_lookup=0, protection=0xffffff80a76abe84, result_page=<unavailable>, top_page=<unavailable>, type_of_fault=<unavailable>, error_code=<unavailable>, no_zero_fill=<unavailable>, data_supply=0, fault_info=0xffffff80a76abbe0) + 3051 at memory_object.c:2178  
+ frame #5: 0xffffff800dba3902 kernel`vm_fault_internal(map=0xffffff8010f761e0, vaddr=140735436247040, fault_type=1, change_wiring=0, interruptible=2, caller_pmap=0x0000000000000000, caller_pmap_addr=<unavailable>, physpage_p=0x0000000000000000) + 3042 at vm_fault.c:4423  
+ frame #6: 0xffffff800dc1ec9c kernel`user_trap(saved_state=<unavailable>) + 732 at vm_fault.c:3229  
+
