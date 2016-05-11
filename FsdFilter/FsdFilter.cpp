@@ -76,6 +76,11 @@ com_FsdFilter::start(
     // register with IOKit to allow the class matching
     //
     registerService();
+    
+    //
+    // make the driver unloadable
+    //
+    this->retain();
 
     return true;
     

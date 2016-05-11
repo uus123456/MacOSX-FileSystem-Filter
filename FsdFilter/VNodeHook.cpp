@@ -805,8 +805,14 @@ FltVnodeHooksHashTable::free()
         assert( !"Non emprty hash!" );
         DBG_PRINT_ERROR( ("FltVnodeHooksHashTable::free() found an entry for an object(0x%p)\n", *(void**)p_key ) );
         
-        FltVnodeHookEntry* entry = (FltVnodeHookEntry*)p_e->p_data;
+        //FltVnodeHookEntry* entry = (FltVnodeHookEntry*)p_e->p_data;
+        //assert( entry );
+        
+        FltVnodeHookEntry* entry = (FltVnodeHookEntry*)ght_remove( p_table, sizeof(VOPFUNC*), p_key );
         assert( entry );
+        if( !entry )
+            continue;
+        
         entry->release();
         
         p_table->fn_free( p_e, p_e->size );
