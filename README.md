@@ -63,3 +63,12 @@ FYI a set of call stacks when hooks are active
 `frame #6: 0xffffff802756855a kernel``act_execute_returnhandlers + 202 at thread_act.c:801`  
 `frame #7: 0xffffff8027536e76 kernel``ast_taken(reasons=<unavailable>, enable=<unavailable>) + 278 at ast.c:177`  
 `frame #8: 0xffffff802761eeae kernel``i386_astintr(preemption=<unavailable>) + 46 at trap.c:1171`  
+
+The module has been made unloadable by taking a reference to IOKit com\_FsdFilter class in com\_FsdFilter::start routine. The reason is because unload for a hooking file system filter driver is a dangerous operation as it is hard to implement it correctly to avoid race conditions and preserve data consistency. To process unload correctly you need to process the following cases  
+  
+- unhook all vnode tables  
+- check that there is no return to the hooking code in any call stack or else unloading a module results in a panic as control returns to unloaded code  
+- check that there is no hooking code being called, i.e. there is no a processor with IP register pointing to any function in a driver  
+- ensure that data changed by a filter will not crash the system or damage user or system data, for example if the driver implements any data modification it should guarantee data consistency on unload  
+  
+The only feasible way to implement this is dividing a driver in two parts - one part can be unloaded and another part is never unloaded. Unloading complicates the code as you have to synchronize the code with unloading procedure, this increases complexity and as a result of this complexity and nondeterminism in the system state it's never implemented correctly
