@@ -24,8 +24,8 @@ The lack of a stackable file system support by Mac OS X VFS required to find a w
 
 ##Example of call stacks when a filter is loaded
 FYI a set of call stacks when hooks are active  
-  
- - Lookup hook  
+
+Lookup hook  
  ```
  frame #0: 0xffffff7f903b7a11 FsdFilter``FltVnopLookupHook(ap=0xffffff80a7053a18) + 17 at VFSHooks.cpp:65  
  frame #1: 0xffffff800dd3f2f8 kernel``lookup(ndp=0xffffff80a7053d58) + 968 at kpi_vfs.c:2783  
@@ -35,9 +35,8 @@ FYI a set of call stacks when hooks are active
  frame #5: 0xffffff800dd54f0a kernel``stat64(p=<unavailable>, uap=0xffffff801e3f1380, retval=<unavailable>) + 58 at vfs_syscalls.c:5413  
  frame #6: 0xffffff800e04dcb2 kernel``unix_syscall64(state=0xffffff801dfc5540) + 610 at systemcalls.c:366  
  ```
-  
-  
- - Pagein hook  
+ 
+ Pagein hook  
  ```
  frame #0: 0xffffff7f903b7b91 FsdFilter``FltVnopPageinHook(ap=0xffffff80a76aba20) + 17 at VFSHooks.cpp:229  
  frame #1: 0xffffff800e046372 kernel``vnode_pagein(vp=0xffffff801904db40, upl=0x0000000000000000, upl_offset=<unavailable>, f_offset=73416704, size=<unavailable>, flags=0, errorp=0xffffff80a76abae8) + 402 at kpi_vfs.c:4980  
@@ -47,9 +46,8 @@ FYI a set of call stacks when hooks are active
  frame #5: 0xffffff800dba3902 kernel``vm_fault_internal(map=0xffffff8010f761e0, vaddr=140735436247040, fault_type=1, change_wiring=0, interruptible=2, caller_pmap=0x0000000000000000, caller_pmap_addr=<unavailable>, physpage_p=0x0000000000000000) + 3042 at vm_fault.c:4423  
  frame #6: 0xffffff800dc1ec9c kernel``user_trap(saved_state=<unavailable>) + 732 at vm_fault.c:3229  
  ```
-  
-  
-- Close hook  
+ 
+ Close hook  
 ```
 frame #0: 0xffffff7f903b7a91 FsdFilter``FltVnopCloseHook(ap=0xffffff80a78cbd28) + 17 at VFSHooks.cpp:119  
 frame #1: 0xffffff800dd734b7 kernel``VNOP_CLOSE(vp=0xffffff801c7144b0, fflag=<unavailable>, ctx=<unavailable>) + 215 at kpi_vfs.c:3047  
@@ -61,9 +59,8 @@ frame #6: 0xffffff800dfad88e kernel``close_internal_locked(p=0xffffff8019600650,
 frame #7: 0xffffff800dfb13d6 kernel``close_nocancel(p=0xffffff8019600650, uap=<unavailable>, retval=<unavailable>) + 342 at kern_descrip.c:2666  
 frame #8: 0xffffff800e04dcb2 kernel``unix_syscall64(state=0xffffff801bc20b20) + 610 at systemcalls.c:366  
 ```
-  
-  
-- Inactive hook  
+
+Inactive hook  
 ```
 frame #0: 0xffffff7fa9dc6ac0 FsdFilter``FltVnopInactiveHook(ap=0xffffff803c5198cc) at VFSHooks.cpp:140  
 frame #1: 0xffffff8027775e06 kernel``VNOP_INACTIVE(vp=0xffffff803c519870, ctx=<unavailable>) + 70 at kpi_vfs.c:4756  
