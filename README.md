@@ -74,7 +74,7 @@ frame #8: 0xffffff802761eeae kernel``i386_astintr(preemption=<unavailable>) + 46
 ```
 
 ##Some words on unloading implementation
-The module has been made unloadable by taking a reference to IOKit com\_FsdFilter class in com\_FsdFilter::start routine. The reason is that unload for a hooking file system filter driver is a dangerous operation as it is hard to implement it correctly to avoid race conditions and preserve data consistency. To process unload correctly you need to process the following cases  
+The module has been made non-unloadable by taking a reference to IOKit com\_FsdFilter class in com\_FsdFilter::start routine. The reason is that unload for a hooking file system filter driver is a dangerous operation as it is hard to implement it correctly to avoid race conditions and preserve data consistency. To process unload correctly you need to process the following cases  
   
 - unhook all vnode tables  
 - check that there is no return to the hooking code in any call stack or else unloading a module results in a panic as control returns to unloaded code  
