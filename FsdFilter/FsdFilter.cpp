@@ -78,7 +78,7 @@ com_FsdFilter::start(
     registerService();
     
     //
-    // make the driver unloadable
+    // make the driver non-unloadable
     //
     this->retain();
 
