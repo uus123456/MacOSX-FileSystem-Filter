@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F99DB8CD1DCF43F100850933 /* distorm.h in Headers */ = {isa = PBXBuildFile; fileRef = F99DB8B71DCF43F100850933 /* distorm.h */; };
+		F99DB8CE1DCF43F100850933 /* mnemonics.h in Headers */ = {isa = PBXBuildFile; fileRef = F99DB8B81DCF43F100850933 /* mnemonics.h */; };
+		F99DB8CF1DCF43F100850933 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = F99DB8BA1DCF43F100850933 /* config.h */; };
+		F99DB8D01DCF43F100850933 /* decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = F99DB8BB1DCF43F100850933 /* decoder.c */; };
+		F99DB8D11DCF43F100850933 /* decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = F99DB8BC1DCF43F100850933 /* decoder.h */; };
+		F99DB8D21DCF43F100850933 /* distorm.c in Sources */ = {isa = PBXBuildFile; fileRef = F99DB8BD1DCF43F100850933 /* distorm.c */; };
+		F99DB8D31DCF43F100850933 /* instructions.c in Sources */ = {isa = PBXBuildFile; fileRef = F99DB8BE1DCF43F100850933 /* instructions.c */; };
+		F99DB8D41DCF43F100850933 /* instructions.h in Headers */ = {isa = PBXBuildFile; fileRef = F99DB8BF1DCF43F100850933 /* instructions.h */; };
+		F99DB8D51DCF43F100850933 /* insts.c in Sources */ = {isa = PBXBuildFile; fileRef = F99DB8C01DCF43F100850933 /* insts.c */; };
+		F99DB8D61DCF43F100850933 /* insts.h in Headers */ = {isa = PBXBuildFile; fileRef = F99DB8C11DCF43F100850933 /* insts.h */; };
+		F99DB8D71DCF43F100850933 /* mnemonics.c in Sources */ = {isa = PBXBuildFile; fileRef = F99DB8C21DCF43F100850933 /* mnemonics.c */; };
+		F99DB8D81DCF43F100850933 /* operands.c in Sources */ = {isa = PBXBuildFile; fileRef = F99DB8C31DCF43F100850933 /* operands.c */; };
+		F99DB8D91DCF43F100850933 /* operands.h in Headers */ = {isa = PBXBuildFile; fileRef = F99DB8C41DCF43F100850933 /* operands.h */; };
+		F99DB8DA1DCF43F100850933 /* prefix.c in Sources */ = {isa = PBXBuildFile; fileRef = F99DB8C51DCF43F100850933 /* prefix.c */; };
+		F99DB8DB1DCF43F100850933 /* prefix.h in Headers */ = {isa = PBXBuildFile; fileRef = F99DB8C61DCF43F100850933 /* prefix.h */; };
+		F99DB8DC1DCF43F100850933 /* textdefs.c in Sources */ = {isa = PBXBuildFile; fileRef = F99DB8C71DCF43F100850933 /* textdefs.c */; };
+		F99DB8DD1DCF43F100850933 /* textdefs.h in Headers */ = {isa = PBXBuildFile; fileRef = F99DB8C81DCF43F100850933 /* textdefs.h */; };
+		F99DB8DE1DCF43F100850933 /* wstring.c in Sources */ = {isa = PBXBuildFile; fileRef = F99DB8C91DCF43F100850933 /* wstring.c */; };
+		F99DB8DF1DCF43F100850933 /* wstring.h in Headers */ = {isa = PBXBuildFile; fileRef = F99DB8CA1DCF43F100850933 /* wstring.h */; };
+		F99DB8E01DCF43F100850933 /* x86defs.c in Sources */ = {isa = PBXBuildFile; fileRef = F99DB8CB1DCF43F100850933 /* x86defs.c */; };
+		F99DB8E11DCF43F100850933 /* x86defs.h in Headers */ = {isa = PBXBuildFile; fileRef = F99DB8CC1DCF43F100850933 /* x86defs.h */; };
 		F9C264EB1C8FEBC90063231B /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = F9C264DC1C8FEBC90063231B /* Common.h */; };
 		F9C264EC1C8FEBC90063231B /* CommonHashTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9C264DD1C8FEBC90063231B /* CommonHashTable.cpp */; };
 		F9C264ED1C8FEBC90063231B /* CommonHashTable.h in Headers */ = {isa = PBXBuildFile; fileRef = F9C264DE1C8FEBC90063231B /* CommonHashTable.h */; };
@@ -22,12 +43,32 @@
 		F9C264F71C8FEBC90063231B /* VmPmap.h in Headers */ = {isa = PBXBuildFile; fileRef = F9C264E81C8FEBC90063231B /* VmPmap.h */; };
 		F9C264F81C8FEBC90063231B /* VNodeHook.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9C264E91C8FEBC90063231B /* VNodeHook.cpp */; };
 		F9C264F91C8FEBC90063231B /* VNodeHook.h in Headers */ = {isa = PBXBuildFile; fileRef = F9C264EA1C8FEBC90063231B /* VNodeHook.h */; };
-		F9C264FF1C8FEFD80063231B /* distorm in Resources */ = {isa = PBXBuildFile; fileRef = F9C264FE1C8FEFD80063231B /* distorm */; };
 		F9C265021C8FF1C90063231B /* FltFakeFSD.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9C265001C8FF1C90063231B /* FltFakeFSD.cpp */; };
 		F9C265031C8FF1C90063231B /* FltFakeFSD.h in Headers */ = {isa = PBXBuildFile; fileRef = F9C265011C8FF1C90063231B /* FltFakeFSD.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F99DB8B71DCF43F100850933 /* distorm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = distorm.h; sourceTree = "<group>"; };
+		F99DB8B81DCF43F100850933 /* mnemonics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mnemonics.h; sourceTree = "<group>"; };
+		F99DB8BA1DCF43F100850933 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		F99DB8BB1DCF43F100850933 /* decoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = decoder.c; sourceTree = "<group>"; };
+		F99DB8BC1DCF43F100850933 /* decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decoder.h; sourceTree = "<group>"; };
+		F99DB8BD1DCF43F100850933 /* distorm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = distorm.c; sourceTree = "<group>"; };
+		F99DB8BE1DCF43F100850933 /* instructions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = instructions.c; sourceTree = "<group>"; };
+		F99DB8BF1DCF43F100850933 /* instructions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = instructions.h; sourceTree = "<group>"; };
+		F99DB8C01DCF43F100850933 /* insts.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = insts.c; sourceTree = "<group>"; };
+		F99DB8C11DCF43F100850933 /* insts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insts.h; sourceTree = "<group>"; };
+		F99DB8C21DCF43F100850933 /* mnemonics.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mnemonics.c; sourceTree = "<group>"; };
+		F99DB8C31DCF43F100850933 /* operands.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = operands.c; sourceTree = "<group>"; };
+		F99DB8C41DCF43F100850933 /* operands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = operands.h; sourceTree = "<group>"; };
+		F99DB8C51DCF43F100850933 /* prefix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = prefix.c; sourceTree = "<group>"; };
+		F99DB8C61DCF43F100850933 /* prefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prefix.h; sourceTree = "<group>"; };
+		F99DB8C71DCF43F100850933 /* textdefs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = textdefs.c; sourceTree = "<group>"; };
+		F99DB8C81DCF43F100850933 /* textdefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = textdefs.h; sourceTree = "<group>"; };
+		F99DB8C91DCF43F100850933 /* wstring.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = wstring.c; sourceTree = "<group>"; };
+		F99DB8CA1DCF43F100850933 /* wstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wstring.h; sourceTree = "<group>"; };
+		F99DB8CB1DCF43F100850933 /* x86defs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = x86defs.c; sourceTree = "<group>"; };
+		F99DB8CC1DCF43F100850933 /* x86defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x86defs.h; sourceTree = "<group>"; };
 		F9C264CF1C8FEB920063231B /* FsdFilter.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FsdFilter.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9C264D61C8FEB920063231B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9C264DC1C8FEBC90063231B /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
@@ -45,7 +86,6 @@
 		F9C264E81C8FEBC90063231B /* VmPmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VmPmap.h; sourceTree = "<group>"; };
 		F9C264E91C8FEBC90063231B /* VNodeHook.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VNodeHook.cpp; sourceTree = "<group>"; };
 		F9C264EA1C8FEBC90063231B /* VNodeHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VNodeHook.h; sourceTree = "<group>"; };
-		F9C264FE1C8FEFD80063231B /* distorm */ = {isa = PBXFileReference; lastKnownFileType = folder; path = distorm; sourceTree = "<group>"; };
 		F9C265001C8FF1C90063231B /* FltFakeFSD.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FltFakeFSD.cpp; sourceTree = "<group>"; };
 		F9C265011C8FF1C90063231B /* FltFakeFSD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FltFakeFSD.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,9 +101,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F99DB8B41DCF43F100850933 /* distorm */ = {
+			isa = PBXGroup;
+			children = (
+				F99DB8B51DCF43F100850933 /* distorm3 */,
+			);
+			name = distorm;
+			path = FsdFilter/distorm;
+			sourceTree = "<group>";
+		};
+		F99DB8B51DCF43F100850933 /* distorm3 */ = {
+			isa = PBXGroup;
+			children = (
+				F99DB8B61DCF43F100850933 /* include */,
+				F99DB8B91DCF43F100850933 /* src */,
+			);
+			path = distorm3;
+			sourceTree = "<group>";
+		};
+		F99DB8B61DCF43F100850933 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				F99DB8B71DCF43F100850933 /* distorm.h */,
+				F99DB8B81DCF43F100850933 /* mnemonics.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		F99DB8B91DCF43F100850933 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F99DB8BA1DCF43F100850933 /* config.h */,
+				F99DB8BB1DCF43F100850933 /* decoder.c */,
+				F99DB8BC1DCF43F100850933 /* decoder.h */,
+				F99DB8BD1DCF43F100850933 /* distorm.c */,
+				F99DB8BE1DCF43F100850933 /* instructions.c */,
+				F99DB8BF1DCF43F100850933 /* instructions.h */,
+				F99DB8C01DCF43F100850933 /* insts.c */,
+				F99DB8C11DCF43F100850933 /* insts.h */,
+				F99DB8C21DCF43F100850933 /* mnemonics.c */,
+				F99DB8C31DCF43F100850933 /* operands.c */,
+				F99DB8C41DCF43F100850933 /* operands.h */,
+				F99DB8C51DCF43F100850933 /* prefix.c */,
+				F99DB8C61DCF43F100850933 /* prefix.h */,
+				F99DB8C71DCF43F100850933 /* textdefs.c */,
+				F99DB8C81DCF43F100850933 /* textdefs.h */,
+				F99DB8C91DCF43F100850933 /* wstring.c */,
+				F99DB8CA1DCF43F100850933 /* wstring.h */,
+				F99DB8CB1DCF43F100850933 /* x86defs.c */,
+				F99DB8CC1DCF43F100850933 /* x86defs.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		F9C264C51C8FEB920063231B = {
 			isa = PBXGroup;
 			children = (
+				F99DB8B41DCF43F100850933 /* distorm */,
 				F9C264D11C8FEB920063231B /* FsdFilter */,
 				F9C264D01C8FEB920063231B /* Products */,
 			);
@@ -80,7 +174,6 @@
 		F9C264D11C8FEB920063231B /* FsdFilter */ = {
 			isa = PBXGroup;
 			children = (
-				F9C264FE1C8FEFD80063231B /* distorm */,
 				F9C265001C8FF1C90063231B /* FltFakeFSD.cpp */,
 				F9C265011C8FF1C90063231B /* FltFakeFSD.h */,
 				F9C264DC1C8FEBC90063231B /* Common.h */,
@@ -112,13 +205,24 @@
 			files = (
 				F9C264ED1C8FEBC90063231B /* CommonHashTable.h in Headers */,
 				F9C264F31C8FEBC90063231B /* VersionDependent.h in Headers */,
+				F99DB8CE1DCF43F100850933 /* mnemonics.h in Headers */,
 				F9C264EB1C8FEBC90063231B /* Common.h in Headers */,
 				F9C264F11C8FEBC90063231B /* Kauth.h in Headers */,
 				F9C264EF1C8FEBC90063231B /* FsdFilter.h in Headers */,
+				F99DB8DB1DCF43F100850933 /* prefix.h in Headers */,
+				F99DB8E11DCF43F100850933 /* x86defs.h in Headers */,
+				F99DB8D61DCF43F100850933 /* insts.h in Headers */,
+				F99DB8D11DCF43F100850933 /* decoder.h in Headers */,
+				F99DB8CD1DCF43F100850933 /* distorm.h in Headers */,
 				F9C265031C8FF1C90063231B /* FltFakeFSD.h in Headers */,
+				F99DB8CF1DCF43F100850933 /* config.h in Headers */,
 				F9C264F71C8FEBC90063231B /* VmPmap.h in Headers */,
+				F99DB8DD1DCF43F100850933 /* textdefs.h in Headers */,
+				F99DB8D91DCF43F100850933 /* operands.h in Headers */,
+				F99DB8DF1DCF43F100850933 /* wstring.h in Headers */,
 				F9C264F91C8FEBC90063231B /* VNodeHook.h in Headers */,
 				F9C264F51C8FEBC90063231B /* VFSHooks.h in Headers */,
+				F99DB8D41DCF43F100850933 /* instructions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +283,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9C264FF1C8FEFD80063231B /* distorm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,13 +293,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F99DB8D21DCF43F100850933 /* distorm.c in Sources */,
 				F9C264F81C8FEBC90063231B /* VNodeHook.cpp in Sources */,
+				F99DB8DC1DCF43F100850933 /* textdefs.c in Sources */,
+				F99DB8DE1DCF43F100850933 /* wstring.c in Sources */,
 				F9C265021C8FF1C90063231B /* FltFakeFSD.cpp in Sources */,
 				F9C264EC1C8FEBC90063231B /* CommonHashTable.cpp in Sources */,
+				F99DB8D71DCF43F100850933 /* mnemonics.c in Sources */,
+				F99DB8DA1DCF43F100850933 /* prefix.c in Sources */,
+				F99DB8D31DCF43F100850933 /* instructions.c in Sources */,
 				F9C264F41C8FEBC90063231B /* VFSHooks.cpp in Sources */,
 				F9C264EE1C8FEBC90063231B /* FsdFilter.cpp in Sources */,
 				F9C264F21C8FEBC90063231B /* VersionDependent.cpp in Sources */,
+				F99DB8D81DCF43F100850933 /* operands.c in Sources */,
 				F9C264F61C8FEBC90063231B /* VmPmap.cpp in Sources */,
+				F99DB8D51DCF43F100850933 /* insts.c in Sources */,
+				F99DB8D01DCF43F100850933 /* decoder.c in Sources */,
+				F99DB8E01DCF43F100850933 /* x86defs.c in Sources */,
 				F9C264F01C8FEBC90063231B /* Kauth.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +346,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					DBG,
+					USE_FAKE_FSD,
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -243,6 +357,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -271,7 +386,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_PREPROCESSOR_DEFINITIONS = USE_FAKE_FSD;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -280,6 +395,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = "";
 				SDKROOT = macosx;
 			};
 			name = Release;
